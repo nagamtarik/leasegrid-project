@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
+
+.font-display { font-family: 'Space Grotesk', sans-serif; }
+.font-mono { font-family: 'IBM Plex Mono', monospace; }
+.font-body { font-family: 'Inter', sans-serif; }
+
+/* Permit-card perforated edge, used on license and auth cards */
+.perm-card { position: relative; }
+.perm-card::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 14px;
+  background-image: radial-gradient(circle, #0B1220 2.5px, transparent 2.6px);
+  background-size: 14px 14px; background-position: 0 4px;
+}
+
+/* Blueprint grid background, used on the district map and auth screen */
+.grid-bg {
+  background-image:
+    linear-gradient(#1A2740 1px, transparent 1px),
+    linear-gradient(90deg, #1A2740 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: #2A3B5C; border-radius: 4px; }
